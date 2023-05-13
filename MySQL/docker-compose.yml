@@ -1,0 +1,18 @@
+version: '3'
+services:
+  mysql:
+    container_name: mysql
+    image: mysql:8
+    # networks:
+    #   RuoYu:
+    #     ipv4_address: 172.20.0.2
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - /var/docker/mysql/data:/var/lib/mysql
+
+# networks:
+#   RuoYu:
+#     external: true

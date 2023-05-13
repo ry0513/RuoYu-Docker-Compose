@@ -1,0 +1,10 @@
+version: "3"
+services:
+  openresty:
+    container_name: openresty
+    image: openresty/openresty
+    labels:
+      createdBy: Apps
+    network_mode: host
+    volumes:
+      - /var/docker/openresty/conf.d:/etc/nginx/conf.d
