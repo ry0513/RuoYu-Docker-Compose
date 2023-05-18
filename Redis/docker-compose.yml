@@ -6,12 +6,12 @@ services:
     # networks:
     #   RuoYu:
     #     ipv4_address: 172.20.0.2
+    restart: always
     command: redis-server --requirepass root
     labels:
       createdBy: Apps
     ports:
       - 6379:6379
-
 # networks:
 #   RuoYu:
 #     external: true

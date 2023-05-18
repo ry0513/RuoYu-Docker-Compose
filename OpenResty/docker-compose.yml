@@ -3,6 +3,7 @@ services:
   openresty:
     container_name: openresty
     image: openresty/openresty
+    restart: always
     labels:
       createdBy: Apps
     network_mode: host

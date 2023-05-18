@@ -1,0 +1,18 @@
+version: '3'
+services:
+  cloudreve:
+    container_name: cloudreve
+    image: cloudreve/cloudreve
+    # networks:
+    #   RuoYu:
+    #     ipv4_address: 172.20.0.4
+    restart: always
+    volumes:
+      - /var/docker/cloudreve/conf.ini:/cloudreve/conf.ini
+      - /var/docker/cloudreve/uploads:/cloudreve/uploads
+      - /var/docker/cloudreve/avatar:/cloudreve/avatar
+    # ports:
+    #   - "5212:5212"
+# networks:
+#   RuoYu:
+#     external: true
